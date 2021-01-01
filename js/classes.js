@@ -5,8 +5,7 @@ class Task {
         this.level = 0
         this.maxLevel = 0 
         this.xp = 0
-        this.xpMultipliers = [
-        ]
+        this.xpMultipliers = []
     }
 
     getMaxXp() {
@@ -43,8 +42,7 @@ class Task {
 class Job extends Task {
     constructor(baseData) {
         super(baseData)   
-        this.incomeMultipliers = [
-        ]
+        this.incomeMultipliers = []
     }
 
     getLevelMultiplier() {
