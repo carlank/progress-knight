@@ -19,7 +19,7 @@
                 <div class="" style="font-size: large">Age <span id="ageDisplay">14</span> Day <span id="dayDisplay">0</span></div>
                 <div class="sidebar-element" style="color: gray">Lifespan: <span id="lifespanDisplay">70</span> years</div>
                 
-                <button id="pauseButton" class="w3-button button sidebar-element" onClick="setPause()">Pause</button>
+                <button id="pauseButton" class="w3-button button sidebar-element">Pause</button>
 
                 <span id="automation" class="inline" style="margin-left: 8px">
                     <span>
@@ -85,7 +85,7 @@
                 <span id="timeWarping">
                     <div style="font-size: large"><span style="color: rgb(177, 30, 190)">Time warping: </span><span id="timeWarpingDisplay"></span></div>
                     <div style="color: gray">Affects game speed</div>
-                    <button id="timeWarpingButton" class="w3-button button sidebar-element" style="margin-top: 5px; width:150px" onClick="setTimeWarping()">Enable warp</button>
+                    <button id="timeWarpingButton" class="w3-button button sidebar-element" style="margin-top: 5px; width:150px">Enable warp</button>
                 </span>
 
                 <span id="debug">
@@ -96,11 +96,11 @@
             </div>
 
             <div class="w3-white w3-margin-left" style="width: 900px; height: 40px; float: left">
-                <div class="w3-button w3-bar-item tabButton" id="jobTabButton" onClick="setTab(this, 'jobs')">Jobs</div>
-                <div class="w3-button w3-bar-item tabButton" onClick="setTab(this, 'skills')">Skills</div>
-                <div class="w3-button w3-bar-item tabButton" id="shopTabButton" onClick="setTab(this, 'shop')">Shop</div>
-                <div class="w3-button w3-bar-item tabButton" id="rebirthTabButton" onClick="setTab(this, 'rebirth')">Amulet</div>
-                <div class="w3-button w3-bar-item tabButton" onClick="setTab(this, 'settings')" style="float: right">Settings</div>
+                <div class="w3-button w3-bar-item tabButton" id="jobTabButton" tab-id="jobs">Jobs</div>
+                <div class="w3-button w3-bar-item tabButton" id="skillTabButton" tab-id="skills">Skills</div>
+                <div class="w3-button w3-bar-item tabButton" id="shopTabButton" tab-id="shop">Shop</div>
+                <div class="w3-button w3-bar-item tabButton" id="rebirthTabButton" tab-id="rebirth">Amulet</div>
+                <div class="w3-button w3-bar-item tabButton" id="settingsTabButton" tab-id="settings" style="float: right">Settings</div>
             </div>
 
             <div class="w3-white w3-margin-left w3-margin-top w3-padding scroll" style="width: 900px; height: 544px; float: left">
@@ -231,7 +231,7 @@
                                 Something tells you that the amulet might transform even further after living for <b>2 whole centuries</b>...</span>
                             </i>
                             </br>
-                            <button class="w3-button button" style="margin-bottom: 8px; margin-top: 8px" onClick="rebirthOne()">Touch the eye</button>
+                            <button id="eyeButton" class="w3-button button" style="margin-bottom: 8px; margin-top: 8px">Touch the eye</button>
                             </br>
                         </li>
                         <li style="margin: 8px;" id="rebirthNote3">
@@ -245,7 +245,7 @@
                                 <b><span id="evilGainDisplay"></span> evil</b>, which will heavily impact your future lives.
                             </i>
                             </br>
-                                <button class="w3-button button" style="margin-bottom: 8px; margin-top: 8px" onClick="rebirthTwo()">Embrace evil</button>
+                                <button id="evilButton" class="w3-button button" style="margin-bottom: 8px; margin-top: 8px">Embrace evil</button>
                             </br>
                         </li>
                     </ul>
@@ -255,15 +255,15 @@
                     <ul>
                         <li>
                             <h2>Import/export save</h2>
-                            <button class="w3-button button" onClick="importGameData()">Import</button>
-                            <button class="w3-button button" onClick="exportGameData()">Export</button>
+                            <button id="importButton"class="w3-button button">Import</button>
+                            <button id="exportButton"class="w3-button button">Export</button>
                             <form style="margin-top: 16px"> 
                                 <input id="importExportBox" type="text" style="width:300px; height:30px"></input>
                             </form>
                         </li>
                         <li>
                             <h2>Hard reset game</h2>
-                            <button class="w3-button button w3-red" onClick="resetGameData()">Reset</button>
+                            <button id="resetButton" class="w3-button button w3-red">Reset</button>
                         </li>
                     </ul>
                 </div>
@@ -272,8 +272,7 @@
     </div>
 </body>
 
-<script type="text/javascript" src="js/HackTimer.js"></script>
-<script type="text/javascript" src="js/classes.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/external/HackTimer.js"></script>
+<script type="module" src="js/main.js"></script>
 
 </html>
