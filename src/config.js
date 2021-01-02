@@ -29,6 +29,7 @@ export const headerRowColors = {
 }
 
 export const updateSpeed = 20
-export let debugSpeed = 1
 export const baseGameSpeed = 4
+export let debugSpeed = 1
+
 export const baseLifespan = 365 * 70
